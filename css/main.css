@@ -1,0 +1,751 @@
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+/* -----------------------------------------------------------------------------
+
+  FONTS
+
+----------------------------------------------------------------------------- */
+@font-face {
+    font-family: 'Roboto_Thin';
+    font-style: normal;
+    src: url("../font/roboto/Roboto-Thin.ttf");
+}
+
+@font-face {
+    font-family: 'Roboto_Light';
+    font-style: normal;
+    src: url("../font/roboto/Roboto-Light.ttf");
+}
+
+@font-face {
+    font-family: 'Roboto_Regular';
+    font-style: normal;
+    src: url("../font/roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Roboto_Medium';
+    font-style: normal;
+    src: url("../font/roboto/Roboto-Medium.ttf");
+}
+
+@font-face {
+    font-family: 'Roboto_Bold';
+    font-style: normal;
+    src: url("../font/roboto/Roboto-Bold.ttf");
+}
+
+
+
+
+
+
+
+
+
+@font-face {
+    font-family: 'Raleway_Thin';
+    font-style: normal;
+    src: url("../font/raleway/raleway-thin.ttf");
+}
+
+@font-face {
+    font-family: 'Raleway_Light';
+    font-style: normal;
+    src: url("../font/raleway/raleway-light.ttf");
+}
+
+@font-face {
+    font-family: 'Raleway_Regular';
+    font-style: normal;
+    src: url("../font/raleway/raleway-regular.ttf");
+}
+
+@font-face {
+    font-family: 'Raleway_Medium';
+    font-style: normal;
+    src: url("../font/raleway/raleway-medium.ttf");
+}
+
+@font-face {
+    font-family: 'Raleway_Bold';
+    font-style: normal;
+    src: url("../font/raleway/raleway-bold.ttf");
+}
+
+
+
+
+
+
+
+
+
+
+
+/****************************************************************************************************/
+/****************************************************************************************************/
+        /************************************** Menu Bar ************************************/
+/****************************************************************************************************/
+/****************************************************************************************************/
+
+
+#menu{
+    position: fixed;
+    top: 0;
+
+}
+
+#menuBar{
+    height: 100vh;
+    width: 3.2rem;
+    /*padding-left: 1rem;*/
+    /*padding-right: 1rem;*/
+    background-color: rgba(0, 0, 0, 0.75);
+    float: left;
+}
+
+
+/************************************** Menu Icon ************************************/
+#menuIcon{
+    position: fixed;
+    top: 0rem;
+}
+
+
+.c-hamburger {
+    /*display: block;*/
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    font-size: 0;
+    text-indent: -9999px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-shadow: none;
+    border-radius: none;
+    border: none;
+    cursor: pointer;
+    -webkit-transition: background 0.3s;
+    transition: background 0.3s;
+    top: 0.8rem;
+    left: 0;
+
+    background-color: rgba(0,0,0,0);
+}
+
+.c-hamburger:focus {
+    outline: none;
+}
+
+.c-hamburger span {
+    display: block;
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    height: 2px;
+    background: white;
+}
+
+.c-hamburger span::before,
+.c-hamburger span::after {
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    content: "";
+}
+
+.c-hamburger span::before {
+    top: -6px;
+}
+
+.c-hamburger span::after {
+    bottom: -6px;
+}
+
+
+/**
+ * Style 3
+ *
+ * Hamburger to left-arrow (htla). Hamburger menu transforms to a left-pointing
+ * arrow. Usually indicates an off canvas menu sliding in from left that
+ * will be close on re-click of the icon.
+ */
+.c-hamburger--htla {
+    background-color: rgba(0,0,0,0) !important;
+}
+
+.c-hamburger--htla span {
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+}
+
+.c-hamburger--htla span::before {
+    -webkit-transform-origin: top right;
+    -ms-transform-origin: top right;
+    transform-origin: top right;
+    -webkit-transition: -webkit-transform 0.3s, width 0.3s, top 0.3s;
+    transition: transform 0.3s, width 0.3s, top 0.3s;
+}
+
+.c-hamburger--htla span::after {
+    -webkit-transform-origin: bottom right;
+    -ms-transform-origin: bottom right;
+    transform-origin: bottom right;
+    -webkit-transition: -webkit-transform 0.3s, width 0.3s, bottom 0.3s;
+    transition: transform 0.3s, width 0.3s, bottom 0.3s;
+}
+
+/* active state, i.e. menu open */
+.c-hamburger--htla.is-active {
+    background-color: rgba(0,0,0,0) !important;
+}
+
+.c-hamburger--htla.is-active span {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+
+}
+
+.c-hamburger--htla.is-active span::before,
+.c-hamburger--htla.is-active span::after {
+    width: 50%;
+    left: -1px !important;
+}
+
+.c-hamburger--htla.is-active span::before {
+    top: -3px !important;
+    -webkit-transform: translateX(18px) translateY(4px) rotate(45deg);
+    -ms-transform: translateX(18px) translateY(4px) rotate(45deg);
+    transform: translateX(18px) translateY(4px) rotate(45deg);
+
+}
+
+.c-hamburger--htla.is-active span::after {
+    bottom: -3px !important;
+    -webkit-transform: translateX(18px) translateY(-4px) rotate(-45deg);
+    -ms-transform: translateX(18px) translateY(-4px) rotate(-45deg);
+    transform: translateX(18px) translateY(-4px) rotate(-45deg);
+}
+
+
+
+
+
+
+/************************************** End Menu Icon ************************************/
+
+/************************************** Menu Navigaition Circles ************************************/
+
+
+.navCircle{
+    display: block;
+    color: white;
+}
+
+.circles{
+    margin: 0 auto;
+}
+
+
+.normalCircle{
+    color: white;
+}
+
+
+.selectedCircle{
+    color: rgba(235, 79, 30, 1);
+}
+
+.iconSize-18 { font-size: 18px; }
+.iconSize-24 { font-size: 24px; }
+.iconSize-36 { font-size: 36px; }
+.iconSize-48 { font-size: 48px; }
+
+
+
+
+
+
+/************************************** End Menu Navigaition Circles ************************************/
+
+/****************************************************************************************************/
+/****************************************************************************************************/
+        /************************************** Menu Block ************************************/
+/****************************************************************************************************/
+/****************************************************************************************************/
+
+
+#menuBlock{
+    height: 100vh;
+    width: 0;
+    background-color: rgba(0, 0, 0, 0.60);
+    float: left;
+    margin-left: -100px;
+    overflow: hidden;
+}
+
+#profile{
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    margin-top: 2rem;
+    border-radius: 50%;
+}
+
+
+
+#profile .image{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+    background: url(../img/ruslan.jpg) no-repeat ;
+    background-size:100%;
+    -webkit-box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.1) inset;
+    -moz-box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.1) inset;
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.1) inset;
+}
+
+
+
+
+/* Menu links */
+
+
+#menuBlock ul{
+    color: white;
+    /*margin: 0 auto;*/
+    margin-left: 5rem;
+    margin-top: 2rem;
+    width: 75px;
+}
+
+#menuBlock ul li a{
+    text-decoration: none;
+    color: white;
+
+    font-family: "Roboto_Light", Helvetica, sans-serif;
+    font-size: 1.3rem;
+    /*line-height: 1.8;*/
+}
+
+#menuBlock ul li a:hover{
+    color: rgba(235, 79, 30, 1);
+}
+
+#menuBlock ul li a.selectedLink{
+    color: rgba(235, 79, 30, 1);
+}
+
+
+
+
+
+#cookiePolicy{
+    position: fixed;
+    left: 3.2rem;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    font-family: "Roboto_Regular", Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+#cookieText{
+    float: left;
+    width: 100%;
+}
+
+#cookieText a{
+    text-decoration: none;
+    color: blue;
+    font-family: "Roboto_Bold", Arial, sans-serif;
+    font-size: 1rem;
+}
+
+#cookieText a:hover{
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+/****************************************************************************************************/
+        /************************************** Wrapper ************************************/
+/****************************************************************************************************/
+
+
+
+#wrapper{
+    width: 100%;
+    /*height: 2000px;*/
+
+    padding-bottom: 50px;
+
+}
+
+
+
+/****************************************************************************************************/
+/****************************************************************************************************/
+    /************************************** Intro Section ************************************/
+/****************************************************************************************************/
+/****************************************************************************************************/
+
+
+#intro{
+    height: 100vh;
+    background-image: url("../img/sun.jpg");
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.center{
+    margin: 0 auto;
+    padding-left: 2rem;
+}
+
+#intro h1, #intro h2{
+    color: whitesmoke;
+    font-family: "Roboto_Thin", Arial, sans-serif;
+    /*font-size: 1rem;*/
+    text-align: center;
+    width: 100%;
+
+}
+
+#intro h2{
+    font-size: 2rem;
+}
+
+
+/****************************************************************************************************/
+/****************************************************************************************************/
+/************************************** About Section ************************************/
+/****************************************************************************************************/
+/****************************************************************************************************/
+
+
+#about{
+    background: whitesmoke;
+    font-family: "Raleway_Thin", Arial, sans-serif;
+    padding-top: 6.25rem;
+    padding-bottom: 7rem;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.show{
+    visibility: visible;
+}
+
+#about h1{
+    margin: 0;
+
+}
+
+#about h3{
+    margin: 0;
+    color: rgba(235, 79, 30, 1);
+}
+
+#about article{
+    font-size: 1.3rem;
+    font-family: "Raleway_Thin", Arial, sans-serif;
+    max-width: 1000px;
+
+
+    /* Animation duration */
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -ms-animation-duration: 1s;
+      animation-duration: 1s;
+
+    -webkit-animation-delay: 0.5s;
+    -moz-animation-delay: 0.5s;
+    -ms-animation-delay: 0.5s;
+      animation-delay: 0.5s;
+
+
+}
+
+
+
+/****************************************************************************************************/
+/****************************************************************************************************/
+/************************************** Knowledge Section ************************************/
+/****************************************************************************************************/
+/****************************************************************************************************/
+#knowledge{
+    height: 100vh;
+    background-image: url("../img/sun.jpg");
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+/****************************************************************************************************/
+/****************************************************************************************************/
+/************************************** Portfolio Section ************************************/
+/****************************************************************************************************/
+/****************************************************************************************************/
+#portfolio{
+    height: 100vh;
+    background-image: url("../img/sun.jpg");
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/****************************************************************************************************/
+/****************************************************************************************************/
+/************************************** Contact Section ************************************/
+/****************************************************************************************************/
+/****************************************************************************************************/
+
+#contact{
+    height: 100vh;
+    background-image: url("../img/sun.jpg");
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    background-position: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
