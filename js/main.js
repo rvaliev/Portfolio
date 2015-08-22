@@ -203,7 +203,8 @@ function toggleHandler(toggle) {
         if (eMenuBlock.width() === 0){
             eMenuBlock.animate({
                 width: "18.125rem",
-                marginLeft: "0px"
+                marginLeft: "0px",
+                zIndex: 333343
             }, 300, "easeInQuad");
         }
         else{
