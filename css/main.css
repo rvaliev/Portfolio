@@ -585,7 +585,7 @@ textarea {
 }
 
 .portfolioCard{
-    width: 31%;
+    width: 47%;
     max-width: 500px;
     display: inline-block;
     position: relative;
@@ -614,7 +614,10 @@ textarea {
     /*max-width: 400px;*/
 
     background: rgba(0, 0, 0, 0.7);
+
     opacity: 0;
+    -webkit-transition: opacity 0.5s;
+
 }
 
 .cardBackContent{
