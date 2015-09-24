@@ -97,6 +97,17 @@ $(document).ready(function(){
     } //end for
 
 
+    $('#topMenuBtn').click(function (e) {
+        e.preventDefault();
+        var topMenuItems = $("#topMenuItems");
+        if (topMenuItems.is(":visible") == false){
+            topMenuItems.slideDown(100);
+        }
+        else{
+            topMenuItems.slideUp(100);
+        }
+    });
+
 });
 /*****************************************************************************************
  * ********************************** END READY ******************************************
@@ -220,6 +231,7 @@ function toggleHandler(toggle) {
         (this.classList.contains("is-active") === true) ? this.classList.remove("is-active") : this.classList.add("is-active");
     });
 } // end toggleHandler
+
 
 
 

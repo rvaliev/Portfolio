@@ -56,6 +56,12 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+.col, .row{
+    /*padding: 0 !important;*/
+    /*margin: 0;*/
+}
+
+
 
 /* -----------------------------------------------------------------------------
 
@@ -433,12 +439,46 @@ textarea {
     text-decoration: underline;
 }
 
+.navbar-fixed{
+    /*top: rem;*/
+    position: fixed;
+}
+
+#topNavigation{
+    background-color: rgba(0, 0, 0, 0.70);
+
+}
 
 
 
+#topMenuBtn{
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+
+#topMenuItems{
+    display: none;
+}
+
+#topMenuItems li{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.79);
+    color: rgba(235, 79, 30, 1);
+}
+
+#topMenuItems li a{
+/*color: rgba(235, 79, 30, 1);*/
+}
 
 
+#topMenuItems li:hover{
+    background: rgba(235, 79, 30, 1);
 
+
+}
 
 
 
@@ -552,6 +592,7 @@ textarea {
 /****************************************************************************************************/
 #knowledge{
     height: 100vh;
+    width: 100%;
     background-image: url("../img/sun.jpg");
     background-size: cover;
     margin: 0;
@@ -576,7 +617,11 @@ textarea {
 
 #cards{
     padding-left: 3.2rem;
-    width: 100%;
+    /*width: 100%;*/
+}
+
+#projectsHeader{
+    margin-bottom: 5rem;
 }
 
 #cards h1{
@@ -585,20 +630,37 @@ textarea {
 }
 
 .portfolioCard{
-    width: 47%;
-    max-width: 500px;
     display: inline-block;
     position: relative;
-    margin: 2rem 1% 1% 1%;
     box-sizing: border-box;
+    background: rgba(255, 255, 255, 0);
+    margin-bottom: 2rem;
+}
+
+
+.portfolioCardWrapper{
+    display: block;
+    -webkit-transition: box-shadow 0.3s;
+    -moz-transition: box-shadow 0.3s;
+    -ms-transition: box-shadow 0.3s;
+    -o-transition: box-shadow 0.3s;
+    transition: box-shadow 0.3s;
+
+}
+
+.portfolioCardWrapper:hover{
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
+.portfolioCardWrapper:hover .portfolioCardBack{
+    opacity: 1;
+ }
 
 .portfolioMedia{
     width: 100%;
     position: relative;
 }
+
 
 
 .portfolioCard img{
@@ -611,12 +673,16 @@ textarea {
     height: 100%;
     margin: 0;
     padding: 0;
-    /*max-width: 400px;*/
-
     background: rgba(0, 0, 0, 0.7);
 
     opacity: 0;
-    -webkit-transition: opacity 0.5s;
+    -webkit-transition: opacity 0.1s;
+    -moz-transition: opacity 0.1s;
+    -ms-transition: opacity 0.1s;
+    -o-transition: opacity 0.1s;
+    transition: opacity 0.1s;
+
+
 
 }
 
@@ -635,8 +701,6 @@ textarea {
     text-align: center;
     margin: 0;
     padding: 0;
-
-    /*position: absolute;*/
 }
 
 
@@ -648,14 +712,9 @@ textarea {
     text-align: center;
     margin: 0;
     padding: 0;
-
-    /*position: absolute;*/
 }
 
 
-.portfolioCardBack:hover{
-    opacity: 1;
-}
 
 
 
@@ -665,6 +724,7 @@ textarea {
     position: relative;
     height: 100px;
 }
+
 
 .portInfoLimiter{
     position: absolute;
@@ -686,6 +746,7 @@ textarea {
 
 #contact{
     height: 100vh;
+    width: 100%;
     background-image: url("../img/sun.jpg");
     background-size: cover;
     margin: 0;
@@ -749,6 +810,26 @@ textarea {
 /* ==========================================================================
    Media Queries
    ========================================================================== */
+
+@media only screen and (max-width: 600px) {
+    .center{
+        padding-left: 0rem;
+        padding-right: 0rem;
+        text-align: center;
+    }
+
+    #cards{
+        padding-left: 1rem;
+        padding-right: 1rem;
+        /*width: 100%;*/
+    }
+
+    #aboutArticle{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
 
 @media only screen and (min-width: 35em) {
 
