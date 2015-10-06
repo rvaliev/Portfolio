@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+
     /**
      * Cache selectors
      * circles, links are anchors on the page

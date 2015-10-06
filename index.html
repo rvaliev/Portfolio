@@ -83,7 +83,7 @@
         <div id="wrapper">
             <section>
                 <div id="intro" class="valign-wrapper tile">
-                    <header class="center">
+                    <header id="tagline" class="center">
                         <h1 class="valign">Ruslan Valiev</h1>
                         <h2 class="valign">WEB DEVELOPER</h2>
                     </header>
@@ -113,21 +113,24 @@
             </section>
 
 
-            <section>
-                <div id="knowledge" class="valign-wrapper">
-                    <header class="center">
-                        <h1 class="valign">SKILLS</h1>
-                        <h2 class="valign">WEB DEVELOPER</h2>
-                    </header>
+            <section class="row">
+                <div id="knowledge" class="tile col s12 m12 l12 valign-wrapper">
+
+                    <div class="row">
+                        <header class="center col s12 m12 l12">
+                            <h1 class="valign">SKILLS</h1>
+                            <h2 class="valign">WEB DEVELOPER</h2>
+                        </header>
+                    </div>
                 </div>
             </section>
 
 
-            <section >
-                <div id="portfolio">
+            <section>
+                <div id="portfolio" class="tile">
                     <div id="cards" class="row center">
                         <header id="projectsHeader">
-                            <h1>Projects / selected works</h1>
+                            <h1>PROJECTS</h1>
                         </header>
                         <article class="col s12 m6 l4 portfolioCard">
                             <a href="#" class="portfolioCardWrapper">
@@ -255,46 +258,70 @@
                             </a>
                         </article>
 
-                        <article class="col s12 m6 l4 portfolioCard">
-                            <a href="#" class="portfolioCardWrapper">
-                                <div class="portfolioMedia">
-                                    <div class="portfolioCardBack cf">
-                                        <div class="verticalAlign cardBackContent">
-                                            <h2>Hello</h2>
-                                            <p>PHP, Wordpress</p>
-                                        </div>
-                                    </div>
-
-                                    <img src="img/nature.jpg" alt="Nature">
-                                </div>
-
-                                <div class="portfolioInfo">
-                                    <div class="portInfoLimiter verticalAlign">
-                                        <p>Whisky project</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </article>
-
-
-
-
-
                     </div>
                 </div>
             </section>
 
 
             <section>
-                <div id="contact" class="valign-wrapper tile">
-                    <header class="center">
-                        <h1 class="valign">CONTACT</h1>
-                        <h2 class="valign">WEB DEVELOPER</h2>
+                <div id="contact" class="row tile">
+                    <header class="center col s12 m12 l12">
+                        <h1>GET IN TOUCH</h1>
                     </header>
+                    <div class="col s12 m12 l12">
+                        <div class="row">
+                            <article id="contactFormBlock" class="col s5 m5 l5 offset-s1 offset-m1 offset-l1">
+                                <h2 class="hidden">Contact Ruslan Valiev</h2>
+                                <form action="index.html" method="post" id="contactForm" class="col s12">
+                                    <div class="row">
+                                        <div class="input-field col s12 m12 l12">
+                                            <i class="material-icons prefix">account_circle</i>
+                                            <input id="icon_prefix" type="text">
+                                            <label for="icon_prefix">Name</label>
+                                        </div>
+                                        <div class="input-field col s12 m12 l12">
+                                            <i class="material-icons prefix">message</i>
+                                            <textarea id="textarea1" class="materialize-textarea" maxlength="500"></textarea>
+                                            <label for="textarea1">Message</label>
+                                        </div>
+                                        <div class="col s12 m3 l4 offset-l8">
+                                            <button id="submitBtn" type="submit" value="Send">Send</button>
+                                        </div>
+                                        <div id="errorMessage" class="col s12 m12 l12">
+                                            Oops, some fields are empty, just fill them all please.
+                                        </div>
+                                    </div>
+                                </form>
+                            </article>
+                            <article id="contactData" class="col s5 m5 l5 offset-s1 offset-m1 offset-l1">
+                                <h2 class="hidden">Contact Ruslan Valiev</h2>
+                                <div class="row">
+                                    <i id="emailIcon" class="col s1 m1 l1 material-icons">perm_phone_msg</i>
+                                    <a class="col s11 m11 l11" id="phone" href="tel:0032487149843"> +32 487 14 98 43</a>
+                                </div>
+                                <div class="row">
+                                    <i id="phoneIcon" class="col s1 m1 l1 material-icons">mail</i>
+                                    <a class="col s11 m11 l11" id="email" href="mailto:hello@ruslan.im">hello@ruslan.im</a>
+                                </div>
+                                <div class="row">
+                                    <i id="githubIcon" class="col s1 m1 l1 fa fa-github"></i>
+                                    <a class="col s11 m11 l11" id="github" href="https://github.com/rvaliev">github.com/rvaliev</a>
+                                </div>
+
+
+                            </article>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-
+            <section>
+                <div id="footer" class="test row">
+                    <div class="col s12 m12 l12">
+                        2015 © Ruslan Valiev
+                    </div>
+                </div>
+            </section>
 
 
 
