@@ -1,7 +1,18 @@
 $(document).ready(function(){
 
 
-    /**
+
+
+    $('.chart').horizBarChart({
+        selector: '.bar',
+        speed: 3000
+    });
+
+
+
+
+
+/**
      * Cache selectors
      * circles, links are anchors on the page
      * menuItems contains only elements with tag 'i'

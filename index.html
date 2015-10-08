@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="css/materialize.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/animate.css">
+        <!--<link rel="stylesheet" href="js/vendor/horizBarChart/css/horizBarChart.css">-->
 
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
@@ -113,14 +114,44 @@
             </section>
 
 
-            <section class="row">
-                <div id="knowledge" class="tile col s12 m12 l12 valign-wrapper">
-
+            <section class="row sectionRow">
+                <div id="knowledge" class="tile col s12 m12 l12">
                     <div class="row">
-                       <!-- <header class="center col s12 m12 l12">
+                        <header class="center col s12 m12 l12">
                             <h1 class="valign">SKILLS</h1>
-                            <h2 class="valign">WEB DEVELOPER</h2>
-                        </header>-->
+                        </header>
+
+
+                        <div class="col s12 m12 l6 chart-horiz">
+                            <ul class="chart">
+                                <li class="title" title="Languages"></li>
+                                <li class="past hidden" title="Template"><span class="bar" data-number="100"></span></li>
+                                <li class="past" title="HTML5"><span class="bar" data-number="80"></span></li>
+                                <li class="past" title="CSS3"><span class="bar" data-number="90"></span></li>
+                                <li class="past" title="JavaScript"><span class="bar" data-number="70"></span></li>
+                                <li class="past" title="MySQL"><span class="bar" data-number="90"></span></li>
+                                <li class="past" title="PHP"><span class="bar" data-number="68"></span></li>
+
+
+                            </ul>
+                        </div>
+
+                        <div class="col s12 m12 l6 chart-horiz">
+                            <ul class="chart">
+                                <li class="title" title="Libraries // FWK // CMS"></li>
+                                <li class="past hidden" title="Template"><span class="bar" data-number="100"></span></li>
+                                <li class="past" title="jQuery"><span class="bar" data-number="70"></span></li>
+                                <li class="past" title="Bootstrap"><span class="bar" data-number="67"></span></li>
+                                <li class="past" title="Materialize"><span class="bar" data-number="90"></span></li>
+                                <li class="past" title="Symfony2"><span class="bar" data-number="66"></span></li>
+                                <li class="past" title="Drupal"><span class="bar" data-number="78"></span></li>
+                                <li class="past" title="Wordpress"><span class="bar" data-number="69"></span></li>
+                                <li class="past" title="Twig"><span class="bar" data-number="88"></span></li>
+                            </ul>
+                        </div>
+
+
+
                     </div>
                 </div>
             </section>
@@ -354,7 +385,10 @@
         <script src="js/plugins.js"></script>
         <script src="js/materialize.js"></script>
         <script src="js/scrollspy.js"></script>
+        <script src='js/vendor/horizBarChart/js/jquery.horizBarChart.js'></script>
         <script src="js/main.js"></script>
+
+
     </body>
 </html>
 

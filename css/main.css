@@ -606,13 +606,86 @@ textarea {
 /************************************** Knowledge Section ************************************/
 /****************************************************************************************************/
 /****************************************************************************************************/
-#knowledge{
-    height: 100vh;
-    width: 100%;
-    background-image: url("../img/sun.jpg");
-    background-size: cover;
+.sectionRow{
     margin: 0;
-    padding: 0;
+}
+
+#knowledge{
+    margin: 0;
+    height: auto;
+    width: 100%;
+    background: #242424;
+    padding: 6.25rem 0 7rem 3.2rem;
+}
+
+#knowledge h1{
+    font-family: "Raleway_Thin", Arial, sans-serif;
+    color: white;
+}
+
+.chart-horiz .chart {
+    width: auto;
+    padding-left: 1rem;
+    padding-right: 4rem;
+/*    -ms-transform: rotate(-90deg); /!* IE 9 *!/
+    -webkit-transform: rotate(-90deg); /!* Chrome, Safari, Opera *!/
+    transform: rotate(-90deg);*/
+}
+
+.chart-horiz .chart li {
+    display: block;
+    height: 40px;
+    margin-top: 6px;
+    position: relative
+}
+
+.chart-horiz .chart li:before {
+    color: white;
+    content: attr(title);
+    left: 5px;
+    padding-top: 8px;
+    position: absolute;
+    padding-left: 10px;
+    font-family: "Roboto_Light", Arial, sans-serif;
+}
+
+.chart-horiz .chart li.title:before {
+    font-family: "Raleway_Thin", Arial, sans-serif;
+    color: white;
+    left: 0
+}
+
+.chart-horiz .chart li:first-child {
+    margin-top: 0;
+}
+
+.chart-horiz .chart li .bar {
+    background: rgb(244, 137, 78);
+    height: 100%;
+    min-width: 10px;
+}
+
+.chart-horiz .chart li .bar:hover {
+    background: rgba(235, 79, 30, 1);
+}
+
+
+.chart-horiz .chart li.past:nth-child(even) .bar {
+    background: rgba(235, 79, 30, 1);
+}
+
+.chart-horiz .chart li.past {
+    border: 1px solid rgba(235, 79, 30, 1);
+    width: 100%;
+}
+
+
+.chart-horiz .chart li.past .bar:hover {
+    background: rgba(235, 79, 30, 1);
+}
+
+.chart-horiz .chart li.past .number {
+    color: black;
 }
 
 
@@ -960,6 +1033,14 @@ textarea {
     #contact h1{
         margin-bottom: 2rem;
     }
+
+    .chart-horiz .chart {
+        width: auto;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+
 }
 
 
@@ -990,6 +1071,10 @@ textarea {
     }
 
     #footer{
+        padding-left: 0;
+    }
+
+    #knowledge{
         padding-left: 0;
     }
 }
