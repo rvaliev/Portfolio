@@ -565,23 +565,24 @@ textarea {
 
 }
 
-.show{
-    visibility: visible;
-}
+
 
 #about h1{
     margin: 0;
+    opacity: 0;
 
 }
 
 #about h3{
     margin: 0;
     color: rgba(235, 79, 30, 1);
+    opacity: 0;
+
 }
 
 #about article{
     font-size: 1.3rem;
-    font-family: "Raleway_Thin", Arial, sans-serif;
+    font-family: "Raleway_Light", Arial, sans-serif;
     max-width: 1000px;
 
 
@@ -595,10 +596,13 @@ textarea {
     -moz-animation-delay: 0.5s;
     -ms-animation-delay: 0.5s;
       animation-delay: 0.5s;
-
+    opacity: 0;
 
 }
 
+.show{
+    visibility: visible;
+}
 
 
 /****************************************************************************************************/
@@ -614,8 +618,10 @@ textarea {
     margin: 0;
     height: auto;
     width: 100%;
-    background: #242424;
+    /*background: #464646;*/
+    background: #14292f;
     padding: 6.25rem 0 7rem 3.2rem;
+
 }
 
 #knowledge h1{
@@ -636,14 +642,14 @@ textarea {
     display: block;
     height: 40px;
     margin-top: 6px;
-    position: relative
+    position: relative;
 }
 
 .chart-horiz .chart li:before {
     color: white;
     content: attr(title);
     left: 5px;
-    padding-top: 8px;
+    padding-top: 9px;
     position: absolute;
     padding-left: 10px;
     font-family: "Roboto_Light", Arial, sans-serif;
@@ -652,7 +658,8 @@ textarea {
 .chart-horiz .chart li.title:before {
     font-family: "Raleway_Thin", Arial, sans-serif;
     color: white;
-    left: 0
+    left: 0;
+    padding-left: 0;
 }
 
 .chart-horiz .chart li:first-child {
@@ -665,24 +672,25 @@ textarea {
     min-width: 10px;
 }
 
-.chart-horiz .chart li .bar:hover {
-    background: rgba(235, 79, 30, 1);
-}
-
 
 .chart-horiz .chart li.past:nth-child(even) .bar {
     background: rgba(235, 79, 30, 1);
 }
 
 .chart-horiz .chart li.past {
-    border: 1px solid rgba(235, 79, 30, 1);
+    outline: 1px dotted rgba(235, 79, 30, 1);
+    /*box-shadow: inset -1px 1px 4px black;*/
+    /*padding-top: 1px;*/
     width: 100%;
+    /*box-sizing: border-box;*/
+}
+
+.chart-horiz .chart li.past:hover {
+    /*box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 10px 10px 0 rgba(0, 0, 0, 0.12);*/
 }
 
 
-.chart-horiz .chart li.past .bar:hover {
-    background: rgba(235, 79, 30, 1);
-}
+
 
 .chart-horiz .chart li.past .number {
     color: black;
@@ -742,8 +750,6 @@ textarea {
     -ms-transition: box-shadow 0.3s;
     -o-transition: box-shadow 0.3s;
     transition: box-shadow 0.3s;
-
-    /*box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);*/
 }
 
 .portfolioCardWrapper:hover{
@@ -845,7 +851,6 @@ textarea {
 #contact{
     min-height: 700px;
     height: 100vh;
-    /*min-height: 400px;*/
     width: 100%;
     background-image: url("../img/contact.png");
     background-attachment: fixed;
@@ -853,8 +858,19 @@ textarea {
     background-repeat: no-repeat;
     background-position: center;
     margin: 0;
-    padding: 6.25rem 0 7rem 3.2rem;
+    padding: 0 0 0 3.2rem;
     color: white;
+}
+
+
+
+.contactBlock{
+    height: auto;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: relative;
 }
 
 #contactForm{
@@ -892,7 +908,6 @@ textarea {
 #submitBtn:hover{
     background: rgba(235, 79, 30, 1);
     border-color: rgba(235, 79, 30, 1);
-    /*color: black;*/
 }
 
 
@@ -901,20 +916,15 @@ textarea {
     width: 100%;
     float: right;
     padding: 0.5rem 1rem 0.5rem 1rem;
-    /*padding-left: 4rem;*/
     background: rgba(235, 79, 30, 1);
     text-align: center;
 }
-.x{
-    outline: 1px solid red;
-    /*padding-left: 20%;*/
-    /*padding-left: 0;*/
 
-}
 
 #contactData{
     margin-top: 1.5rem;
 }
+
 
 #phone, #email, #github{
     color: white;
@@ -922,7 +932,6 @@ textarea {
     font-size: 1.4rem;
     margin-top: 0.2rem;
     padding-left: 1rem;
-    /*outline: 1px solid red;*/
     width: auto;
 }
 
@@ -932,10 +941,7 @@ textarea {
 
 #phoneIcon, #emailIcon, #githubIcon{
     font-size: 2.4rem;
-    /*margin: 0;*/
     padding: 0;
-    /*outline: 1px solid red;*/
-
 }
 
 #githubIcon{
@@ -950,8 +956,7 @@ textarea {
 #footer{
     padding: 1rem 0 1rem 3.2rem;
     color: white;
-    /*background: #282828;*/
-    background: black;
+    background: #142228;
     margin: 0;
     width: 100%;
     text-align: center;
@@ -963,7 +968,9 @@ textarea {
 
 
 
-
+.x{
+    outline: 1px solid red;
+}
 
 
 
@@ -1023,6 +1030,14 @@ textarea {
 @media only screen and (max-width: 992px) {
     #contact{
         height: auto;
+        padding: 6.25rem 0 7rem 3.2rem;
+    }
+
+    .contactBlock{
+        top: 0;
+        -webkit-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        transform: translateY(0%);
     }
 
     #contactForm{
@@ -1040,6 +1055,9 @@ textarea {
         padding-right: 0;
     }
 
+    #intro, #contact{
+        background-attachment: scroll;
+    }
 
 }
 
@@ -1051,32 +1069,15 @@ textarea {
         text-align: center;
     }
 
-    #intro{
-        background-attachment: scroll;
-    }
-
-    #cards{
-        padding-left: 1rem;
-        padding-right: 1rem;
-        /*width: 100%;*/
-    }
-
-    #aboutArticle{
+    #cards, #aboutArticle{
         padding-left: 1rem;
         padding-right: 1rem;
     }
-    #contact{
-        padding-left: 0;
-        background-attachment: scroll;
-    }
 
-    #footer{
+    #knowledge, #contact, #footer{
         padding-left: 0;
     }
 
-    #knowledge{
-        padding-left: 0;
-    }
 }
 
 

@@ -64,10 +64,11 @@
             <nav id="topNavigation">
                     <a href="#" id="topMenuBtn">MENU</a>
                     <ul id="topMenuItems">
-                        <li><a href="sass.html">About</a></li>
-                        <li><a href="badges.html">Skills</a></li>
-                        <li><a href="collapsible.html">Portfolio</a></li>
-                        <li><a href="mobile.html">Contact</a></li>
+                        <li><a data-link="intro" href="#intro" class="selectedLink">Home</a></li>
+                        <li><a data-link="about" href="#about">About</a></li>
+                        <li><a data-link="knowledge" href="#knowledge">Knowledge</a></li>
+                        <li><a data-link="portfolio" href="#portfolio">Portfolio</a></li>
+                        <li><a data-link="contact" href="#contact">Contacts</a></li>
                     </ul>
             </nav>
         </div>
@@ -127,12 +128,10 @@
                                 <li class="title" title="Languages"></li>
                                 <li class="past hidden" title="Template"><span class="bar" data-number="100"></span></li>
                                 <li class="past" title="HTML5"><span class="bar" data-number="80"></span></li>
-                                <li class="past" title="CSS3"><span class="bar" data-number="90"></span></li>
-                                <li class="past" title="JavaScript"><span class="bar" data-number="70"></span></li>
-                                <li class="past" title="MySQL"><span class="bar" data-number="90"></span></li>
-                                <li class="past" title="PHP"><span class="bar" data-number="68"></span></li>
-
-
+                                <li class="past" title="CSS3"><span class="bar" data-number="75"></span></li>
+                                <li class="past" title="JavaScript"><span class="bar" data-number="77"></span></li>
+                                <li class="past" title="MySQL"><span class="bar" data-number="80"></span></li>
+                                <li class="past" title="PHP"><span class="bar" data-number="90"></span></li>
                             </ul>
                         </div>
 
@@ -140,13 +139,13 @@
                             <ul class="chart">
                                 <li class="title" title="Libraries // FWK // CMS"></li>
                                 <li class="past hidden" title="Template"><span class="bar" data-number="100"></span></li>
-                                <li class="past" title="jQuery"><span class="bar" data-number="70"></span></li>
-                                <li class="past" title="Bootstrap"><span class="bar" data-number="67"></span></li>
-                                <li class="past" title="Materialize"><span class="bar" data-number="90"></span></li>
-                                <li class="past" title="Symfony2"><span class="bar" data-number="66"></span></li>
-                                <li class="past" title="Drupal"><span class="bar" data-number="78"></span></li>
-                                <li class="past" title="Wordpress"><span class="bar" data-number="69"></span></li>
-                                <li class="past" title="Twig"><span class="bar" data-number="88"></span></li>
+                                <li class="past" title="jQuery"><span class="bar" data-number="77"></span></li>
+                                <li class="past" title="Bootstrap"><span class="bar" data-number="80"></span></li>
+                                <li class="past" title="Materialize"><span class="bar" data-number="77"></span></li>
+                                <li class="past" title="Wordpress"><span class="bar" data-number="60"></span></li>
+                                <li class="past" title="Twig"><span class="bar" data-number="80"></span></li>
+                                <li class="past" title="Symfony2 - scheduled"><span class="bar" data-number="1"></span></li>
+                                <li class="past" title="Drupal - scheduled"><span class="bar" data-number="1"></span></li>
                             </ul>
                         </div>
 
@@ -296,51 +295,53 @@
 
             <section>
                 <div id="contact" class="row tile">
-                    <header class="center col s12 m12 l12">
-                        <h1>GET IN TOUCH</h1>
-                    </header>
-                    <div class="col s12 m12 l12">
-                        <div class="row">
-                            <article id="contactFormBlock" class="col s12 m10 l5 offset-m1 offset-l1">
-                                <h2 class="hidden">Contact Ruslan Valiev</h2>
-                                <form action="index.html" method="post" id="contactForm" class="col s12 m12 l12">
+                    <div class="contactBlock cf">
+                        <header class="center col s12 m12 l12">
+                            <h1>GET IN TOUCH</h1>
+                        </header>
+                        <div class="col s12 m12 l12">
+                            <div class="row">
+                                <article id="contactFormBlock" class="col s12 m10 l5 offset-m1 offset-l1">
+                                    <h2 class="hidden">Contact Ruslan Valiev</h2>
+                                    <form action="index.html" method="post" id="contactForm" class="col s12 m12 l12">
+                                        <div class="row">
+                                            <div class="input-field col s12 m12 l12">
+                                                <i class="material-icons prefix">account_circle</i>
+                                                <input id="icon_prefix" type="text">
+                                                <label for="icon_prefix">Name</label>
+                                            </div>
+                                            <div class="input-field col s12 m12 l12">
+                                                <i class="material-icons prefix">message</i>
+                                                <textarea id="textarea1" class="materialize-textarea" maxlength="500"></textarea>
+                                                <label for="textarea1">Message</label>
+                                            </div>
+                                            <div class="col s12 m4 l4 offset-m8 offset-l8">
+                                                <button id="submitBtn" type="submit" value="Send">Send</button>
+                                            </div>
+                                            <div id="errorMessage" class="col s12 m12 l12">
+                                                Oops, some fields are empty, just fill them all please.
+                                            </div>
+                                        </div>
+                                    </form>
+                                </article>
+                                <article id="contactData" class="col s12 m10 l5 offset-m1 offset-l1">
+                                    <h2 class="hidden">Contact Ruslan Valiev</h2>
                                     <div class="row">
-                                        <div class="input-field col s12 m12 l12">
-                                            <i class="material-icons prefix">account_circle</i>
-                                            <input id="icon_prefix" type="text">
-                                            <label for="icon_prefix">Name</label>
-                                        </div>
-                                        <div class="input-field col s12 m12 l12">
-                                            <i class="material-icons prefix">message</i>
-                                            <textarea id="textarea1" class="materialize-textarea" maxlength="500"></textarea>
-                                            <label for="textarea1">Message</label>
-                                        </div>
-                                        <div class="col s12 m4 l4 offset-m8 offset-l8">
-                                            <button id="submitBtn" type="submit" value="Send">Send</button>
-                                        </div>
-                                        <div id="errorMessage" class="col s12 m12 l12">
-                                            Oops, some fields are empty, just fill them all please.
-                                        </div>
+                                        <i id="emailIcon" class="col s1 m1 l1 offset-s3 offset-m3 material-icons">perm_phone_msg</i>
+                                        <a class="col s5 m7 l11" id="phone" href="tel:0032487149843"> +32 487 14 98 43</a>
                                     </div>
-                                </form>
-                            </article>
-                            <article id="contactData" class="col s12 m10 l5 offset-m1 offset-l1">
-                                <h2 class="hidden">Contact Ruslan Valiev</h2>
-                                <div class="row">
-                                    <i id="emailIcon" class="col s1 m1 l1 offset-s3 offset-m3 material-icons">perm_phone_msg</i>
-                                    <a class="col s5 m7 l11" id="phone" href="tel:0032487149843"> +32 487 14 98 43</a>
-                                </div>
-                                <div class="row">
-                                    <i id="phoneIcon" class="col s1 m1 l1 offset-s3 offset-m3 material-icons">mail</i>
-                                    <a class="col s5 m7 l11" id="email" href="mailto:hello@ruslan.im">hello@ruslan.im</a>
-                                </div>
-                                <div class="row">
-                                    <i id="githubIcon" class="col s1 m1 l1 offset-s3 offset-m3 fa fa-github"></i>
-                                    <a class="col s5 m7 l11" id="github" href="https://github.com/rvaliev">github.com/rvaliev</a>
-                                </div>
+                                    <div class="row">
+                                        <i id="phoneIcon" class="col s1 m1 l1 offset-s3 offset-m3 material-icons">mail</i>
+                                        <a class="col s5 m7 l11" id="email" href="mailto:hello@ruslan.im">hello@ruslan.im</a>
+                                    </div>
+                                    <div class="row">
+                                        <i id="githubIcon" class="col s1 m1 l1 offset-s3 offset-m3 fa fa-github"></i>
+                                        <a class="col s5 m7 l11" id="github" href="https://github.com/rvaliev">github.com/rvaliev</a>
+                                    </div>
 
 
-                            </article>
+                                </article>
+                            </div>
                         </div>
                     </div>
                 </div>

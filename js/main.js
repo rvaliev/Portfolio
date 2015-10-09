@@ -3,10 +3,7 @@ $(document).ready(function(){
 
 
 
-    $('.chart').horizBarChart({
-        selector: '.bar',
-        speed: 3000
-    });
+
 
 
 
@@ -22,7 +19,7 @@ $(document).ready(function(){
      */
     var lastId,
         circles = $(".circles"),
-        links   = $("#menuLinks"),
+        links   = $("#menuLinks, #topMenuItems"),
     // All list items
         menuItems = circles.find("i"),
         linksItems = links.find("a"),
@@ -38,6 +35,8 @@ $(document).ready(function(){
         aboutH3                 = $('#aboutH3'),
         aboutArticle            = $('#aboutArticle');
 
+    skillsShowed = false; // global variable
+    aboutShowed  = false; // global variable
 
     /**
      * Caching all div blocks and their positions into arrAllBlocksPositions array
@@ -90,8 +89,14 @@ $(document).ready(function(){
         // calling anchorsHandling function
         anchorsHandling(cur, lastId, menuItems, linksItems, aboutH1, aboutH3, aboutArticle);
 
+
         // show and animate block on scroll
-        showOnScroll(fromTop, aboutH1, aboutH3, aboutArticle, arrAllBlocksPositions);
+        showOnScrollIntro(fromTop, aboutH1, aboutH3, aboutArticle, arrAllBlocksPositions);
+
+        showOnScrollSkills(fromTop, arrAllBlocksPositions);
+
+
+
 
 
     }); // end window scroll
@@ -139,15 +144,24 @@ $(document).ready(function(){
  * arrAllBlocksPositions[3] => portfolio
  * arrAllBlocksPositions[4] => contact
  */
-function showOnScroll(fromTop, aboutH1, aboutH3, aboutArticle, arrAllBlocksPositions){
-    if (fromTop >= (arrAllBlocksPositions[1][1] - 400) && fromTop < (arrAllBlocksPositions[2][1] - 200)){
+function showOnScrollIntro(fromTop, aboutH1, aboutH3, aboutArticle, arrAllBlocksPositions){
+    if (fromTop >= (arrAllBlocksPositions[1][1] - 400) && (fromTop < (arrAllBlocksPositions[2][1] - 200)) && (aboutShowed == false)){
         aboutH1.addClass('animated fadeInLeft show');
         aboutH3.addClass('animated fadeInRight show');
         aboutArticle.addClass('animated fadeIn show');
+        aboutShowed = true; // changing global variable
     }
 }
 
-
+function showOnScrollSkills(fromTop, arrAllBlocksPositions){
+    if (fromTop >= (arrAllBlocksPositions[2][1] - 400) && (fromTop < (arrAllBlocksPositions[3][1] - 200)) && (skillsShowed == false)){
+        $('.chart').horizBarChart({
+            selector: '.bar',
+            speed: 3000
+        });
+        skillsShowed = true;   // changing global variable
+    }
+}
 
 
 
