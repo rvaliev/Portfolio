@@ -171,6 +171,7 @@ textarea {
     /*padding-left: 1rem;*/
     /*padding-right: 1rem;*/
     background-color: rgba(0, 0, 0, 0.75);
+    /*background: rgba(20, 41, 47, 0.9);*/
     float: left;
 }
 
@@ -357,6 +358,7 @@ textarea {
     height: 100vh;
     width: 0;
     background-color: rgba(0, 0, 0, 0.60);
+    /*background: rgba(20, 41, 47, 0.75);*/
     float: left;
     margin-left: -100px;
     overflow: hidden;
@@ -402,7 +404,7 @@ textarea {
     text-decoration: none;
     color: white;
 
-    font-family: "Roboto_Light", Helvetica, sans-serif;
+    font-family: "Raleway_Light", Helvetica, sans-serif;
     font-size: 1.3rem;
     /*line-height: 1.8;*/
 }
@@ -518,12 +520,22 @@ textarea {
     background-position: center;
     margin: 0;
     padding: 0;
+
+
+
+
+
+
 }
+
+
+
 
 #tagline{
     width: 100%;
     background: rgba(0,0,0, 0.6);
     padding: 1rem 2rem;
+    margin-left: 3.2rem;
 }
 
 .center{
@@ -562,7 +574,8 @@ textarea {
     padding-bottom: 7rem;
     overflow: hidden;
 
-
+    margin: 0;
+    padding: 6.25rem 0.2rem 7rem 3rem;
 }
 
 
@@ -584,7 +597,7 @@ textarea {
     font-size: 1.3rem;
     font-family: "Raleway_Light", Arial, sans-serif;
     max-width: 1000px;
-
+    /*padding: 0 4rem;*/
 
     /* Animation duration */
     -webkit-animation-duration: 1s;
@@ -619,7 +632,8 @@ textarea {
     height: auto;
     width: 100%;
     /*background: #464646;*/
-    background: #14292f;
+    /*background: #14292f;*/
+    background: #112228;
     padding: 6.25rem 0 7rem 3.2rem;
 
 }
@@ -631,8 +645,8 @@ textarea {
 
 .chart-horiz .chart {
     width: auto;
-    padding-left: 1rem;
-    padding-right: 4rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
 /*    -ms-transform: rotate(-90deg); /!* IE 9 *!/
     -webkit-transform: rotate(-90deg); /!* Chrome, Safari, Opera *!/
     transform: rotate(-90deg);*/
@@ -798,13 +812,23 @@ textarea {
 }
 
 .portfolioCard h2{
-    font-size: 2.5rem;
+    font-size: 1rem;
     font-family: "Raleway_Regular", Arial, sans-serif;
     color: whitesmoke;
     width: 100%;
     text-align: center;
     margin: 0;
     padding: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+
+.techList{
+    color: white;
+    text-align: center;
+    font-size: 0.9rem;
+    font-family: "Raleway_Regular", Arial, sans-serif;
 }
 
 
@@ -918,6 +942,7 @@ textarea {
     padding: 0.5rem 1rem 0.5rem 1rem;
     background: rgba(235, 79, 30, 1);
     text-align: center;
+    display: none;
 }
 
 
@@ -953,6 +978,17 @@ textarea {
     font-size: 2.4rem !important;
 }
 
+
+
+
+/****************************************************************************************************/
+/****************************************************************************************************/
+/************************************** Footer Section ************************************/
+/****************************************************************************************************/
+/****************************************************************************************************/
+
+
+
 #footer{
     padding: 1rem 0 1rem 3.2rem;
     color: white;
@@ -965,6 +1001,9 @@ textarea {
 }
 
 
+#footer h2{
+    font-size: 0.8rem;
+}
 
 
 
@@ -1064,12 +1103,17 @@ textarea {
 
 @media only screen and (max-width: 600px) {
     .center{
-        padding-left: 0rem;
-        padding-right: 0rem;
+        padding-left: 0;
+        padding-right: 0;
         text-align: center;
     }
 
-    #cards, #aboutArticle{
+    #tagline{
+        margin-left: 0;
+    }
+
+
+    #about, #cards, #aboutArticle{
         padding-left: 1rem;
         padding-right: 1rem;
     }
@@ -1089,6 +1133,18 @@ textarea {
 @media only screen and (max-width: 450px) {
     #phoneIcon, #emailIcon, #githubIcon{
         margin-left: 17%;
+    }
+
+    h1{
+        font-size: 3.5rem;
+    }
+
+    h2, h3{
+        font-size: 2.5rem;
+    }
+
+    #intro{
+        background-position: 25% 50%;
     }
 }
 
